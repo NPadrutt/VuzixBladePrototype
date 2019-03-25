@@ -1,8 +1,7 @@
 <resources>
-
-    <!-- Base application theme. -->
-    <style name="AppTheme" >
-
+    <style name="AppTheme"  parent="HudTheme" >
     </style>
 
+    <style name="AppTheme.Light" parent="HudTheme.Light" >
+    </style>
 </resources>
