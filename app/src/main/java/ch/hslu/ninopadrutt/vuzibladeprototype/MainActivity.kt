@@ -1,9 +1,9 @@
 package ch.hslu.ninopadrutt.vuzibladeprototype
 
-import android.app.Activity
 import android.os.Bundle
+import com.vuzix.hud.actionmenu.ActionMenuActivity
 
-class MainActivity : Activity() {
+class MainActivity : ActionMenuActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
