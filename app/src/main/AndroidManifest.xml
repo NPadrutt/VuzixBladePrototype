@@ -10,7 +10,8 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-
+        <activity android:name=".MessageOverview">
+        </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -27,7 +28,10 @@
             <meta-data
                     android:name="android.appwidget.provider"
                     android:resource="@xml/vuzix_blade_prototype_widget_info"/>
-            <meta-data android:name="com.vuzix.launcher.widget" android:value="ch.hslu.ninopadrutt.vuzibladeprototype.MainActivity" />
+            <meta-data
+                    android:name="com.vuzix.launcher.widget"
+                    android:value="ch.hslu.ninopadrutt.vuzibladeprototype.MainActivity"/>
         </receiver>
     </application>
+
 </manifest>
