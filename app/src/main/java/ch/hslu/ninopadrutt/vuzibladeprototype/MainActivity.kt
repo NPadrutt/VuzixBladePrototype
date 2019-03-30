@@ -1,5 +1,6 @@
 package ch.hslu.ninopadrutt.vuzibladeprototype
 
+import android.app.ActivityOptions
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -7,6 +8,9 @@ import com.vuzix.hud.actionmenu.ActionMenuActivity
 import android.widget.Toast
 import android.content.Context
 import android.content.Intent
+import android.util.Log
+import android.view.KeyEvent
+import android.view.MotionEvent
 import android.widget.ArrayAdapter
 import android.widget.ListView
 
@@ -26,28 +30,17 @@ class MainActivity : ActionMenuActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+    }
 
-        var listData = listOf("Fehler: 1", "Warnungen: 3", "Informationen 5")
-        var list = findViewById<ListView>(R.id.list_main)
-        var adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listData)
-        list.adapter = adapter
+    override fun dispatchKeyEvent(event: KeyEvent): Boolean {
 
-        list.setOnItemClickListener { parent, view, position, id ->
-
-            var intent: Intent
-
-            if (position == 0) {
-                intent = createIntent(this, ERROR_INTENT_TYPE);
-            }
-            else if (position == 1) {
-                intent = createIntent(this, WARNING_INTENT_TYPE);
-            }
-            else {
-                intent = createIntent(this, INFORMATION_INTENT_TYPE);
-            }
-
+        if (event.keyCode == KeyEvent.KEYCODE_DPAD_RIGHT) {
+            val intent = Intent(context, WarningActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         }
+
+        return super.dispatchKeyEvent(event)
     }
 
     override fun onCreateActionMenu(menu: Menu?): Boolean {
@@ -78,11 +71,5 @@ class MainActivity : ActionMenuActivity() {
     private fun showToast(text: String) {
         val activity = this
         activity.runOnUiThread { Toast.makeText(activity, text, Toast.LENGTH_SHORT).show() }
-    }
-
-    private fun createIntent(context : Context, type: String) : Intent {
-        val intent = Intent(context, MessageOverview::class.java)
-        intent.putExtra(INTENT_TYPE, type)
-        return intent;
     }
 }
