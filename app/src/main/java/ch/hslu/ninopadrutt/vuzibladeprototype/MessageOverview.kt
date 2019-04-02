@@ -1,13 +1,9 @@
 package ch.hslu.ninopadrutt.vuzibladeprototype
 
-import android.support.v7.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import android.widget.ArrayAdapter
 import android.widget.ListView
 import android.widget.Toast
-import android.view.View
-import android.widget.TextView
-import android.view.ViewGroup
 import com.vuzix.hud.actionmenu.ActionMenuActivity
 
 class MessageOverview : ActionMenuActivity() {
@@ -36,10 +32,15 @@ class MessageOverview : ActionMenuActivity() {
 
         list.adapter = adapter
         list.setOnItemClickListener { parent, view, position, id ->
-            Toast.makeText(this, "Position Clicked:"+" "+position, Toast.LENGTH_SHORT).show()
+
+            val item = listOfMessages.get(position)
+            val intent = Intent(context, DetailPage::class.java)
+            intent.putExtra(DetailPage.ITEM_TYPE_KEY, "something")
+            intent.putExtra(DetailPage.ITEM_MACHINE_KEY, item.Machine)
+            intent.putExtra(DetailPage.ITEM_MESSAGE_KEY, item.Message)
+            startActivity(intent);
         }
     }
-
 
     private fun getErrors() : ArrayList<ListItemHolder>{
         var item1 = ListItemHolder();
@@ -55,12 +56,12 @@ class MessageOverview : ActionMenuActivity() {
         item1.Machine = "Machine: 010202"
 
         var item2 = ListItemHolder();
-        item1.Message = "Delta 3 überschritten"
-        item1.Machine = "Machine: 010202"
+        item2.Message = "Delta 3 überschritten"
+        item2.Machine = "Machine: 010202"
 
         var item3 = ListItemHolder();
-        item1.Message = "Delta 4 überschritten"
-        item1.Machine = "Machine: 010202"
+        item3.Message = "Delta 4 überschritten"
+        item3.Machine = "Machine: 010202"
 
         return arrayListOf(item1, item2, item3)
     }
@@ -71,20 +72,20 @@ class MessageOverview : ActionMenuActivity() {
         item1.Machine = "Machine: 010202"
 
         var item2 = ListItemHolder();
-        item1.Message = "Still Awesome"
-        item1.Machine = "Machine: 010202"
+        item2.Message = "Still Awesome"
+        item2.Machine = "Machine: 010202"
 
         var item3 = ListItemHolder();
-        item1.Message = "Yep, all good"
-        item1.Machine = "Machine: 010202"
+        item3.Message = "Yep, all good"
+        item3.Machine = "Machine: 010202"
 
         var item4 = ListItemHolder();
-        item1.Message = "Fine here"
-        item1.Machine = "Machine: 010202"
+        item4.Message = "Fine here"
+        item4.Machine = "Machine: 010202"
 
         var item5 = ListItemHolder();
-        item1.Message = "..Stop asking"
-        item1.Machine = "Machine: 010202"
+        item5.Message = "..Stop asking"
+        item5.Machine = "Machine: 010202"
 
         return arrayListOf(item1, item2, item3, item4, item5)
     }

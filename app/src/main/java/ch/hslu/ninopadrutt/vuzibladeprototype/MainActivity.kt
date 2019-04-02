@@ -10,7 +10,6 @@ import android.content.Intent
 import android.widget.ArrayAdapter
 import android.widget.ListView
 
-
 class MainActivity : ActionMenuActivity() {
 
     companion object {
