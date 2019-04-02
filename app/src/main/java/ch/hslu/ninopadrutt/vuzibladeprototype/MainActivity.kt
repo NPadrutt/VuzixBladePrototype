@@ -27,7 +27,7 @@ class MainActivity : ActionMenuActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var listData = listOf("Fehler: 1", "Warnungen: 3", "Informationen 5")
+        var listData = listOf("Fehler: 1", "Warnungen: 3", "Informationen: 5", "Scan QR Code")
         var list = findViewById<ListView>(R.id.list_main)
         var adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listData)
         list.adapter = adapter
@@ -42,8 +42,11 @@ class MainActivity : ActionMenuActivity() {
             else if (position == 1) {
                 intent = createIntent(this, WARNING_INTENT_TYPE);
             }
-            else {
+            else if (position == 2) {
                 intent = createIntent(this, INFORMATION_INTENT_TYPE);
+            }
+            else {
+                intent = Intent(context, ScanQRCode::class.java)
             }
 
             startActivity(intent)
