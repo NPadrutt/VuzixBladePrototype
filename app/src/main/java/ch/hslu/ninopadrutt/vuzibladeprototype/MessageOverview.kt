@@ -8,6 +8,12 @@ import com.vuzix.hud.actionmenu.ActionMenuActivity
 
 class MessageOverview : ActionMenuActivity() {
 
+    companion object {
+        public val ERROR_INTENT_TYPE = "error"
+        public val WARNING_INTENT_TYPE = "warning"
+        public val INFORMATION_INTENT_TYPE = "information"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_over_view_warnings)
@@ -16,13 +22,13 @@ class MessageOverview : ActionMenuActivity() {
 
         var listOfMessages = arrayListOf<ListItemHolder>()
 
-        if(type == MainActivity.ERROR_INTENT_TYPE) {
+        if(type == ERROR_INTENT_TYPE) {
             listOfMessages = getErrors()
         }
-        else if(type == MainActivity.WARNING_INTENT_TYPE) {
+        else if(type == WARNING_INTENT_TYPE) {
             listOfMessages = getWarnings()
         }
-        else if(type == MainActivity.INFORMATION_INTENT_TYPE) {
+        else if(type == INFORMATION_INTENT_TYPE) {
             listOfMessages = getInformation()
         }
 

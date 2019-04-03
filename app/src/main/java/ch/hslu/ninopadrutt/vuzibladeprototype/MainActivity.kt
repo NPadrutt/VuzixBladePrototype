@@ -14,9 +14,6 @@ class MainActivity : ActionMenuActivity() {
 
     companion object {
         public val INTENT_TYPE = "intent_type"
-        public val ERROR_INTENT_TYPE = "error"
-        public val WARNING_INTENT_TYPE = "warning"
-        public val INFORMATION_INTENT_TYPE = "information"
     }
 
     private var openMenuItem: MenuItem? = null
@@ -36,13 +33,13 @@ class MainActivity : ActionMenuActivity() {
             var intent: Intent
 
             if (position == 0) {
-                intent = createIntent(this, ERROR_INTENT_TYPE);
+                intent = createIntent(this, MessageOverview.ERROR_INTENT_TYPE);
             }
             else if (position == 1) {
-                intent = createIntent(this, WARNING_INTENT_TYPE);
+                intent = createIntent(this, MessageOverview.WARNING_INTENT_TYPE);
             }
             else if (position == 2) {
-                intent = createIntent(this, INFORMATION_INTENT_TYPE);
+                intent = createIntent(this, MessageOverview.INFORMATION_INTENT_TYPE);
             }
             else {
                 intent = Intent(context, ScanQRCode::class.java)

@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DetailPage"></activity>
+        <activity android:name=".MachineOverview"></activity>
+        <activity android:name=".DetailPage" />
         <activity android:name=".ScanQRCode" />
         <activity android:name=".MessageOverview" />
         <activity android:name=".MainActivity">
