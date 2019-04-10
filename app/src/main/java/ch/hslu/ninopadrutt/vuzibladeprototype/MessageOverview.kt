@@ -50,8 +50,8 @@ class MessageOverview : ActionMenuActivity() {
 
     private fun getErrors() : ArrayList<ListItemHolder>{
         var item1 = ListItemHolder();
-        item1.Message = "This is an Error!"
-        item1.Machine = "Machine: 010202"
+        item1.Message = "Motor A Kugellager muss ersetzt werden."
+        item1.Machine = "Maschine: 010202"
 
         return arrayListOf(item1)
     }
@@ -74,24 +74,25 @@ class MessageOverview : ActionMenuActivity() {
 
     private fun getInformation() : ArrayList<ListItemHolder>{
         var item1 = ListItemHolder();
-        item1.Message = "Everything Awesome"
-        item1.Machine = "Machine: 010202"
+        item1.Message = "Auftrag 2019034 wurde gestartet."
+        item1.Machine = "Maschine: 010202"
 
         var item2 = ListItemHolder();
-        item2.Message = "Still Awesome"
-        item2.Machine = "Machine: 010202"
+        item2.Message = "Auftrag 2019034 zu 1% Verarbeitet"
+        item2.Machine = "Maschine: 010202"
 
-        var item3 = ListItemHolder();
-        item3.Message = "Yep, all good"
-        item3.Machine = "Machine: 010202"
+        var item2 = ListItemHolder();
+        item2.Message = "Auftrag 2019034 zu 2% Verarbeitet"
+        item2.Machine = "Maschine: 010202"
 
-        var item4 = ListItemHolder();
-        item4.Message = "Fine here"
-        item4.Machine = "Machine: 010202"
+        var item2 = ListItemHolder();
+        item2.Message = "Materialkontainer A aufgefüllt."
+        item2.Machine = "Maschine: 010202"
 
-        var item5 = ListItemHolder();
-        item5.Message = "..Stop asking"
-        item5.Machine = "Machine: 010202"
+        var item2 = ListItemHolder();
+        item2.Message = "Materialkontainer B aufgefüllt."
+        item2.Machine = "Maschine: 010202"
+
 
         return arrayListOf(item1, item2, item3, item4, item5)
     }
