@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <RelativeLayout
@@ -16,11 +17,10 @@
             android:text="Meldungsübersicht"/>
 
         <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_alignParentEnd="true"
-            android:src="@drawable/menu_24" />
+            android:src="@drawable/ic_assignment_24dp"/>
     </RelativeLayout>
 
     <ListView android:id="@+id/list_main"

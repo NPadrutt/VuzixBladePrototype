@@ -81,7 +81,7 @@ class MessageOverview : ActionMenuActivity() {
         item3.Message = "Delta 4 überschritten"
         item3.Machine = "Machine: 010204"
 
-        return arrayListOf(item1, item2, item3)
+        return arrayListOf(item1, item2, item3, item4, item5, item6)
     }
 
     private fun getInformation() : ArrayList<ListItemHolder>{
@@ -94,56 +94,56 @@ class MessageOverview : ActionMenuActivity() {
         item2.Machine = "Maschine: 010202"
 
         var item3 = ListItemHolder();
-        item2.Message = "Auftrag 2019034 zu 2% Verarbeitet"
-        item2.Machine = "Maschine: 010202"
+        item3.Message = "Auftrag 2019034 zu 2% Verarbeitet"
+        item3.Machine = "Maschine: 010202"
 
         var item4 = ListItemHolder();
-        item2.Message = "Materialkontainer A aufgefüllt."
-        item2.Machine = "Maschine: 010202"
+        item4.Message = "Materialkontainer A aufgefüllt."
+        item4.Machine = "Maschine: 010202"
 
         var item5 = ListItemHolder();
-        item2.Message = "Materialkontainer B aufgefüllt."
-        item2.Machine = "Maschine: 010202"
+        item5.Message = "Materialkontainer B aufgefüllt."
+        item5.Machine = "Maschine: 010202"
 
         var item6 = ListItemHolder();
-        item1.Message = "Auftrag 2019034 wurde gestartet."
-        item1.Machine = "Maschine: 010203"
+        item6.Message = "Auftrag 2019034 wurde gestartet."
+        item6.Machine = "Maschine: 010203"
 
         var item7 = ListItemHolder();
-        item2.Message = "Auftrag 2019034 zu 1% Verarbeitet"
-        item2.Machine = "Maschine: 010201"
+        item7.Message = "Auftrag 2019034 zu 1% Verarbeitet"
+        item7.Machine = "Maschine: 010201"
 
         var item8 = ListItemHolder();
-        item2.Message = "Auftrag 2019034 zu 2% Verarbeitet"
-        item2.Machine = "Maschine: 010204"
+        item8.Message = "Auftrag 2019034 zu 2% Verarbeitet"
+        item8.Machine = "Maschine: 010204"
 
         var item9 = ListItemHolder();
-        item2.Message = "Materialkontainer A aufgefüllt."
-        item2.Machine = "Maschine: 010205"
+        item9.Message = "Materialkontainer A aufgefüllt."
+        item9.Machine = "Maschine: 010205"
 
         var item10 = ListItemHolder();
-        item2.Message = "Materialkontainer B aufgefüllt."
-        item2.Machine = "Maschine: 010206"
+        item10.Message = "Materialkontainer B aufgefüllt."
+        item10.Machine = "Maschine: 010206"
 
         var item11 = ListItemHolder();
-        item2.Message = "Materialkontainer B aufgefüllt."
-        item2.Machine = "Maschine: 010207"
+        item11.Message = "Materialkontainer B aufgefüllt."
+        item11.Machine = "Maschine: 010207"
 
         var item12 = ListItemHolder();
-        item1.Message = "Auftrag 2019034 wurde gestartet."
-        item1.Machine = "Maschine: 010203"
+        item12.Message = "Auftrag 2019034 wurde gestartet."
+        item12.Machine = "Maschine: 010203"
 
         var item13 = ListItemHolder();
-        item2.Message = "Auftrag 2019034 zu 1% Verarbeitet"
-        item2.Machine = "Maschine: 010201"
+        item13.Message = "Auftrag 2019034 zu 1% Verarbeitet"
+        item13.Machine = "Maschine: 010201"
 
         var item14 = ListItemHolder();
-        item2.Message = "Auftrag 2019034 zu 2% Verarbeitet"
-        item2.Machine = "Maschine: 010203"
+        item14.Message = "Auftrag 2019034 zu 2% Verarbeitet"
+        item14.Machine = "Maschine: 010203"
 
         var item15 = ListItemHolder();
-        item2.Message = "Materialkontainer A aufgefüllt."
-        item2.Machine = "Maschine: 010204"
+        item15.Message = "Materialkontainer A aufgefüllt."
+        item15.Machine = "Maschine: 010204"
 
         return arrayListOf(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15)
     }
