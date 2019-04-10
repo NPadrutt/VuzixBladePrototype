@@ -23,7 +23,7 @@ class MainActivity : ActionMenuActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var listData = listOf("Fehler: 1", "Warnungen: 3", "Informationen: 5", "Scan QR Code")
+        var listData = listOf("Fehler: 1", "Warnungen: 6", "Informationen: 15", "Scan QR Code")
         var list = findViewById<ListView>(R.id.list_main)
         var adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listData)
         list.adapter = adapter

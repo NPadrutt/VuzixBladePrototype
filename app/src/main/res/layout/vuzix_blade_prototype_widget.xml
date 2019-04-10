@@ -31,7 +31,7 @@
                     android:layout_centerInParent="true"
                     android:textSize="40sp"
                     style="@style/HudTheme.TextView"
-                    android:text="3"/>
+                    android:text="6"/>
         </LinearLayout>
 
         <LinearLayout android:orientation="horizontal"
@@ -50,6 +50,6 @@
                 android:layout_centerInParent="true"
                 android:textSize="40sp"
                 style="@style/HudTheme.TextView"
-                android:text="5"/>
+                android:text="15"/>
         </LinearLayout>
 </RelativeLayout>
