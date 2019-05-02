@@ -70,16 +70,16 @@ class MessageOverview : ActionMenuActivity() {
         item3.Machine = "Machine: 010202"
 
         var item4 = ListItemHolder();
-        item1.Message = "Delta 1 überschritten"
-        item1.Machine = "Machine: 010203"
+        item4.Message = "Delta 1 überschritten"
+        item4.Machine = "Machine: 010203"
 
         var item5 = ListItemHolder();
-        item2.Message = "Delta 3 überschritten"
-        item2.Machine = "Machine: 010204"
+        item5.Message = "Delta 3 überschritten"
+        item5.Machine = "Machine: 010204"
 
         var item6 = ListItemHolder();
-        item3.Message = "Delta 4 überschritten"
-        item3.Machine = "Machine: 010204"
+        item6.Message = "Delta 4 überschritten"
+        item6.Machine = "Machine: 010204"
 
         return arrayListOf(item1, item2, item3, item4, item5, item6)
     }
